@@ -290,11 +290,12 @@ public class DataxTask extends AbstractTaskExecutor {
             loadProps.put("strip_outer_array","true");
             writerParam.set("loadProps",loadProps);
             // 添加数据库
-            if (dbTable.size() > 1){
+            if (dbTable.containsKey("db")){
                 writerParam.put("database", dbTable.get("db"));
+            } else {
+                writerParam.put("database", DataSourceUtils.getDatabase(DbType.valueOf(dataXParameters.getDtType()), dataTargetCfg));
             }
             writerParam.put("table",dbTable.get("table"));
-            writerParam.put("database", DataSourceUtils.getDatabase(DbType.valueOf(dataXParameters.getDtType()), dataTargetCfg));
         } else {
             List<ObjectNode> writerConnArr = new ArrayList<>();
             ObjectNode writerConn = JSONUtils.createObjectNode();
