@@ -501,6 +501,7 @@ export default {
     datax_target_table_tips: 'Please enter the name of the target table',
     datax_target_database_pre_sql: 'Pre SQL Statement',
     datax_target_database_post_sql: 'Post SQL Statement',
+    datax_source_database_pre_sql: 'data source session',
     datax_non_query_sql_tips: 'Please enter the non-query sql statement',
     datax_job_speed_byte: 'Speed(Byte count)',
     datax_job_speed_byte_info: '(0 means unlimited)',

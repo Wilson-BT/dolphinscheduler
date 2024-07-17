@@ -257,6 +257,7 @@ interface ITaskParams {
   title?: string
   groupId?: string
   preStatements?: string[]
+  session?: string[]
   postStatements?: string[]
   method?: string
   jobType?: 'CUSTOM' | 'TEMPLATE'

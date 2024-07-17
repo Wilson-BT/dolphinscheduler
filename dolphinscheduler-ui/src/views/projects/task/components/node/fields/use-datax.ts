@@ -146,6 +146,17 @@ export function useDataX(model: { [field: string]: any }): IJsonItem[] {
       span: datasourceSpan
     }),
     {
+      type: 'multi-input',
+      field: 'session',
+      name: t('project.node.datax_source_database_pre_sql'),
+      span: otherStatementSpan,
+      props: {
+        placeholder: t('project.node.datax_non_query_sql_tips'),
+        type: 'textarea',
+        autosize: { minRows: 1 }
+      }
+    },
+    {
       type: 'editor',
       field: 'sql',
       name: t('project.node.sql_statement'),

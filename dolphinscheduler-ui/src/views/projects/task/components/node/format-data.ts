@@ -239,6 +239,7 @@ export function formatParams(data: INodeData): {
       taskParams.jobSpeedByte = data.jobSpeedByte
       taskParams.jobSpeedRecord = data.jobSpeedRecord
       taskParams.preStatements = data.preStatements
+      taskParams.session = data.session
       taskParams.postStatements = data.postStatements
     } else {
       taskParams.json = data.json

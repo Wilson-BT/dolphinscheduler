@@ -80,6 +80,11 @@ public class DataxParameters extends AbstractParameters {
     private List<String> preStatements;
 
     /**
+     * 预执行sql
+     */
+    private List<String> session;
+
+    /**
      * Post Statements
      */
     private List<String> postStatements;
@@ -172,8 +177,16 @@ public class DataxParameters extends AbstractParameters {
         return preStatements;
     }
 
+    public List<String> getSession(){
+        return session;
+    }
+
     public void setPreStatements(List<String> preStatements) {
         this.preStatements = preStatements;
+    }
+
+    public void setSession(List<String> session) {
+        this.session = session;
     }
 
     public List<String> getPostStatements() {
@@ -244,6 +257,7 @@ public class DataxParameters extends AbstractParameters {
                 + ", dataTarget=" + dataTarget
                 + ", sql='" + sql + '\''
                 + ", targetTable='" + targetTable + '\''
+                + ", session='" + session + '\''
                 + ", preStatements=" + preStatements
                 + ", postStatements=" + postStatements
                 + ", jobSpeedByte=" + jobSpeedByte

@@ -262,7 +262,10 @@ public class DataxTask extends AbstractTaskExecutor {
         readerParam.put("username", dataSourceCfg.getUser());
         readerParam.put("password", decodePassword(dataSourceCfg.getPassword()));
         readerParam.putArray("connection").addAll(readerConnArr);
-
+        if (CollectionUtils.isNotEmpty(dataXParameters.getSession())){
+            ArrayNode session = readerParam.putArray("session");
+            dataXParameters.getSession().forEach(session::add);
+        }
         ObjectNode reader = JSONUtils.createObjectNode();
         reader.put("name", DataxUtils.getReaderPluginName(dataxTaskExecutionContext.getSourcetype()));
         reader.set("parameter", readerParam);

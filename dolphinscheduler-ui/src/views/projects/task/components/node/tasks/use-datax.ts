@@ -48,6 +48,7 @@ export function useDataX({
     dsType: 'MYSQL',
     dtType: 'MYSQL',
     preStatements: [],
+    session: [],
     postStatements: []
   } as INodeData)
 

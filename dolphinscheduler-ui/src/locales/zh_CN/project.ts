@@ -497,6 +497,7 @@ export default {
     datax_target_database: '目标源实例',
     datax_target_table: '目标表',
     datax_target_table_tips: '请输入目标表名',
+    datax_source_database_pre_sql: '源库Session设置',
     datax_target_database_pre_sql: '目标库前置SQL',
     datax_target_database_post_sql: '目标库后置SQL',
     datax_non_query_sql_tips: '请输入非查询SQL语句',
